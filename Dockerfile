@@ -7,7 +7,7 @@
 #RUN ./gradlew build
 
 
-FROM adoptopenjdk/openjdk11
+FROM openjdk:8-jdk-slim as runtime
 RUN apt-get update && apt-get install -y unzip
 #WORKDIR /gradle
 #RUN curl -L https://services.gradle.org/distributions/gradle-6.5.1-bin.zip -o gradle-6.5.1-bin.zip
